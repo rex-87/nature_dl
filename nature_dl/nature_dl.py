@@ -40,10 +40,13 @@ try:
 
 	issue_title = '{}'.format(soup.title.text)
 	pdf_folder = os.path.join('pdf', issue_title)
+	articles_folder = os.path.join(pdf_folder, 'articles')
 	if not os.path.exists('pdf'):
 		os.mkdir('pdf')
 	if not os.path.exists(pdf_folder):
 		os.mkdir(pdf_folder)
+	if not os.path.exists(articles_folder):
+		os.mkdir(articles_folder)
 	
 	pdf_merger = PdfFileMerger()
 
@@ -84,7 +87,7 @@ try:
 					category = my_replace(category_div.text.split('\n')[0])
 
 				# pdf_name = '{}.pdf'.format(id_)
-				pdf_name = os.path.join(pdf_folder,'{} - {}.pdf'.format(category, title))
+				pdf_name = os.path.join(articles_folder, '{} - {}.pdf'.format(category, title))
 				print("Export to PDF:", pdf_name)
 				with open(pdf_name, 'wb') as fout:
 					fout.write(pdf_req.content)
@@ -92,10 +95,6 @@ try:
 				# with open(pdf_name, 'rb') as fin:
 				pdf_stream_l.append(open(pdf_name, 'rb'))
 				pdf_merger.append(pdf_stream_l[-1])
-
-				if len(pdf_stream_l) >= 2:
-					print(pdf_stream_l[-1] == pdf_stream_l[-2])
-					print(pdf_stream_l[-1] is pdf_stream_l[-2])
 
 	issue_path = os.path.join(pdf_folder, "Nature, "+issue_title+".pdf")
 	with open(issue_path, 'wb') as fout:

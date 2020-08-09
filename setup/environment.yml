@@ -1,0 +1,39 @@
+name: nature_dl_env
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2020.6.24=0
+  - certifi=2020.6.20=py38_0
+  - openssl=1.1.1g=he774522_0
+  - pip=20.2.1=py38_0
+  - python=3.8.5=he1778fa_0
+  - setuptools=49.2.1=py38_0
+  - sqlite=3.32.3=h2a8f88b_0
+  - vc=14.1=h0510ff6_4
+  - vs2015_runtime=14.16.27012=hf0eaf9b_3
+  - wheel=0.34.2=py38_0
+  - wincertstore=0.2=py38_0
+  - zlib=1.2.11=h62dcd97_4
+  - pip:
+    - backcall==0.2.0
+    - beautifulsoup4==4.9.1
+    - chardet==3.0.4
+    - colorama==0.4.3
+    - decorator==4.4.2
+    - idna==2.10
+    - ipython==7.17.0
+    - ipython-genutils==0.2.0
+    - jedi==0.17.2
+    - parso==0.7.1
+    - pickleshare==0.7.5
+    - prompt-toolkit==2.0.10
+    - pygments==2.6.1
+    - pypdf2==1.26.0
+    - requests==2.24.0
+    - six==1.15.0
+    - soupsieve==2.0.1
+    - traitlets==4.3.3
+    - urllib3==1.25.10
+    - wcwidth==0.2.5
+prefix: C:\Users\rex87\miniconda3_64\envs\nature_dl_env
+
